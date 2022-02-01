@@ -18,8 +18,6 @@
 DB_NAME=<value>
 DB_USER=<value>
 DB_PASSWORD=<value>
-COOKIE_SECRET=<value>
-TOKEN_SECRET=<value>
 PORT=<value>
 ```
 
