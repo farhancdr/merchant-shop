@@ -45,29 +45,29 @@ you can create shop by using a merchant id putting merchant details in the reque
       "merchant": {
           "id" : 2
       },
-      "shop_name": "mudirDokan2",
+      "shop_name": "AmarShopno",
       "shop_category": 2,
       "trade_license_number": "12345678ds9",
-      "age_of_shop": 3,
-      "shop_image": "mudirDokan.jpg"
+      "age_of_shop": 2,
+      "shop_image": "AmarShopno.jpg"
     }
   #### using merchant details
     http://localhost:5000/api/merchants
     {
       "merchant": {
-          "email": "saadmanx@gmail.com",
-          "merchant_name": "Sadman Ahmed",
-          "user_name": "saadmanx",
-          "phone": "+8801856254156",
-          "nid": "123456789",
+          "email": "amarshopno@gmail.com",
+          "merchant_name": "Sabbir Ahmed",
+          "user_name": "sabbir",
+          "phone": "01856254156",
+          "nid": "199910154875004",
           "subscription_package_id": "1",
           "used_referral_code": "Shadinota"
       },
-      "shop_name": "mudirDokan2",
+      "shop_name": "AmarShopno",
       "shop_category": 2,
       "trade_license_number": "12345678ds9",
-      "age_of_shop": 3,
-      "shop_image": "mudirDokan.jpg"
+      "age_of_shop": 2,
+      "shop_image": "AmarShopno.jpg"
     }
 
 
@@ -86,11 +86,11 @@ you can create shop by using a merchant id putting merchant details in the reque
 
     http://localhost:5000/api/merchants
     {
-      "email": "saadman@gmail.com",
-      "merchant_name": "Sadman Ahmed",
-      "user_name": "saadman",
-      "phone": "+8801856254156",
-      "nid": "123456789",
+      "email": "nazmul@gmail.com",
+      "merchant_name": "Nazmul Huda",
+      "user_name": "nazmul",
+      "phone": "01856254156",
+      "nid": "19992540500045",
       "subscription_package_id": "1",
       "used_referral_code": "Shadinota"
     }
@@ -99,9 +99,13 @@ you can create shop by using a merchant id putting merchant details in the reque
 ## Image Upload API
 
 ### upload a image file
-- go to postman
-- select form data
-- set KEY as 'image_file`
-- select file from dropdown
-- finally select your image from your machine
-- send request
+`POST /api/uploadImage/`
+  
+`http://localhost:5000/api/uploadImage`
+
+    - go to postman
+    - select form data
+    - set KEY as 'image_file`
+    - select file from dropdown
+    - finally select your image from your machine
+    - send request
