@@ -1,10 +1,11 @@
-const Shop = require("../shop/shop.model");
 const ImageFile = require("./image.model");
 
 async function uploadImage(req, res) {
     try {
+        const { originalname, destination } = req.file;
         await ImageFile.create({
-            image_path: JSON.stringify(req.file)
+            file_name: originalname,
+            image_path: destination
         }
         );
         res.status(201).send("Image uploaded successfully");
