@@ -45,6 +45,7 @@ async function init() {
             Shop.findOrCreate({
                 where: { shop_name: "mudirDokan" },
                 defaults: {
+                    merchant_id: 1,
                     shop_name: "mudirDokan",
                     shop_category: 5,
                     trade_license_number: "123456789",

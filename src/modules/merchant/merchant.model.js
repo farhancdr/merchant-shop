@@ -1,6 +1,7 @@
 const path = require("path");
 const sequelize = require(path.join(process.cwd(), "src/config/lib/sequelize"));
 const { DataTypes } = require('sequelize');
+// const Shop = require(path.join(process.cwd(), 'src/modules/shop/shop.model'));
 
 const Merchant = sequelize.define('merchants', {
     merchant_name: {
@@ -44,5 +45,8 @@ const Merchant = sequelize.define('merchants', {
     createdAt: 'account_creation_date',
     updatedAt: 'updated_by'
 });
+
+// Merchant.hasMany(Shop, { as: "merchant_shops", foreignKey: "merchant_id" });
+// Shop.belongsTo(Merchant, { as: "shop_merchant", foreignKey: "merchant_id" });
 
 module.exports = Merchant;

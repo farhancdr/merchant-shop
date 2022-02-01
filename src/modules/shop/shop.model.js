@@ -3,6 +3,10 @@ const sequelize = require(path.join(process.cwd(), "src/config/lib/sequelize"));
 const { DataTypes } = require('sequelize');
 
 const Shop = sequelize.define('shops', {
+    merchant_id:{
+        allowNull: false,
+        type: DataTypes.INTEGER
+    },
     shop_name: {
         allowNull: false,
         type: DataTypes.STRING,
