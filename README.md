@@ -47,7 +47,6 @@ $ yarn start            # run project with nodemon
 ### Create a new merchant
 
 `POST /api/merchants`
-    `schema`
 
     http://localhost:5000/api/merchants
     {
@@ -76,7 +75,6 @@ $ yarn start            # run project with nodemon
 you can create shop by using a merchant id putting merchant details in the request body.
   
   #### using merchant id
-    `schema`
     http://localhost:5000/api/merchants
     {
       "merchant": {
@@ -89,7 +87,6 @@ you can create shop by using a merchant id putting merchant details in the reque
       "shop_image": "mudirDokan.jpg"
     }
   #### using merchant details
-    `schema`
     http://localhost:5000/api/merchants
     {
       "merchant": {
