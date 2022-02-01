@@ -5,13 +5,8 @@ async function init() {
     const config = require(path.join(process.cwd(), "src/config/config"));
     await config.initEnvironmentVariables();
 
-    const nodecache = require(path.join(process.cwd(), "src/config/lib/nodecache"));
-
     const sequelize = require(path.join(process.cwd(), "src/config/lib/sequelize"));
 
-    await sequelize.query(
-        `CREATE DATABASE IF NOT EXISTS ${nodecache.getValue("DB_NAME")}`
-    );
 
     const Merchant = require(path.join(process.cwd(), "src/modules/merchant/merchant.model"));
     const Shop = require(path.join(process.cwd(), "src/modules/shop/shop.model"));

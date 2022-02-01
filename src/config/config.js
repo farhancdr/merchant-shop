@@ -39,16 +39,6 @@ let getGlobbedPaths = function (globPatterns, excludes) {
 
 async function initEnvironmentVariables() {
     require('dotenv').config();
-
-    const nodecache = require(path.join(process.cwd(), 'src/config/lib/nodecache'));
-
-    const secrets = { secret1: 'secret1', secret2: 'secret2' }; // more secrets, if any from cloud
-
-    for (const key in secrets) {
-        if(secrets.hasOwnProperty(key)) {
-            nodecache.setValue(key, secrets[key]);
-        }
-    }
 }
 
 function getGlobalConfig() {

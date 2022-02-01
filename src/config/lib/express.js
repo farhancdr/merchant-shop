@@ -1,13 +1,9 @@
 const path = require("path");
 const express = require("express");
-const cookieParser = require("cookie-parser");
 const config = require('../config');
-const nodecache = require('./nodecache');
-
 module.exports = async function () {
     const app = express();
 
-    app.use(cookieParser(nodecache.getValue('COOKIE_SECRET')));
     app.use(express.json());
     app.use(express.urlencoded({ extended: true }));
 
