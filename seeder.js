@@ -22,7 +22,7 @@ async function init() {
                     email: "saadman@gmail.com",
                     merchant_name: "Sadman Ahmed",
                     user_name: "saadman",
-                    phone: "+8801856254156",
+                    phone: "01856254156",
                     nid: "123456789",
                     subscription_package_id: "1",
                     used_referral_code: "Shadinota",
@@ -39,14 +39,14 @@ async function init() {
     function ShopSeeder(callback) {
         try {
             Shop.findOrCreate({
-                where: { shop_name: "mudirDokan" },
+                where: { shop_name: "TechShop" },
                 defaults: {
                     merchant_id: 1,
-                    shop_name: "mudirDokan",
+                    shop_name: "TechShop",
                     shop_category: 5,
                     trade_license_number: "123456789",
                     age_of_shop: 1,
-                    shop_image: "mudirDokan.jpg",
+                    shop_image: "myshop.jpg",
                 },
             }).then(function () {
                 callback();
@@ -61,7 +61,7 @@ async function init() {
             ImageFile.findOrCreate({
                 where: { file_name: "programmer.jpg" },
                 defaults: {
-                    image_path: "C:\\Users\\farhancdr\\Documents\\bonik\\merchant-shop\\public\\uploads\\1643729027586-programmer.jpg"
+                    image_path: "C:\\Users\\farhancdr\\Documents\\bonik\\public\\uploads\\1643729027586-programmer.jpg"
                 },
             }).then(function () {
                 callback();
