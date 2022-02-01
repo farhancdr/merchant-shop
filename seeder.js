@@ -64,9 +64,9 @@ async function init() {
     function ImageSeeder(callback) {
         try {
             ImageFile.findOrCreate({
-                where: { image_path: "public/uploads/1643728771433-programmer.jpg" },
+                where: { file_name: "programmer.jpg" },
                 defaults: {
-                    image_path: "public/uploads/1643728771433-programmer.jpg"
+                    image_path: "C:\\Users\\farhancdr\\Documents\\bonik\\merchant-shop\\public\\uploads\\1643729027586-programmer.jpg"
                 },
             }).then(function () {
                 callback();
