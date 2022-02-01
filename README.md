@@ -33,46 +33,13 @@ $ yarn start            # run project with nodemon
 
 ## API Documentation
 
-## Merchants API
-
-### Get all merchants
-
-`GET /api/merchants`
-
-    http://localhost:5000/api/merchants
-
-
-### Create a new merchant
-
-`POST /api/merchants`
-
-    http://localhost:5000/api/merchants
-    {
-      "email": "saadman@gmail.com",
-      "merchant_name": "Sadman Ahmed",
-      "user_name": "saadman",
-      "phone": "+8801856254156",
-      "nid": "123456789",
-      "subscription_package_id": "1",
-      "used_referral_code": "Shadinota"
-    }
-
-## Shops API
-
-### Get all shops
-
-`GET /api/shops`
-
-    http://localhost:5000/api/shops
-
-
-### Create a new shop
+## INSERT into both tables using single POST request
 
 `POST /api/shops`
 
 you can create shop by using a merchant id putting merchant details in the request body.
   
-  #### using merchant id
+  #### using merchant id ( in that case you have to create a merchant first)
     http://localhost:5000/api/merchants
     {
       "merchant": {
@@ -102,6 +69,32 @@ you can create shop by using a merchant id putting merchant details in the reque
       "age_of_shop": 3,
       "shop_image": "mudirDokan.jpg"
     }
+
+
+## Merchants API
+
+### Get all merchants
+
+`GET /api/merchants`
+
+    http://localhost:5000/api/merchants
+
+
+### Create a new merchant
+
+`POST /api/merchants`
+
+    http://localhost:5000/api/merchants
+    {
+      "email": "saadman@gmail.com",
+      "merchant_name": "Sadman Ahmed",
+      "user_name": "saadman",
+      "phone": "+8801856254156",
+      "nid": "123456789",
+      "subscription_package_id": "1",
+      "used_referral_code": "Shadinota"
+    }
+
 
 ## Image Upload API
 
