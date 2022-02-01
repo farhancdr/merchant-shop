@@ -15,6 +15,7 @@ async function init() {
 
     const Merchant = require(path.join(process.cwd(), "src/modules/merchant/merchant.model"));
     const Shop = require(path.join(process.cwd(), "src/modules/shop/shop.model"));
+    const ImageFile = require(path.join(process.cwd(), "src/modules/image/image.model"));
 
     await sequelize.sync();
 
@@ -60,9 +61,24 @@ async function init() {
             console.log(err);
         }
     }
+    function ImageSeeder(callback) {
+        try {
+            ImageFile.findOrCreate({
+                where: { image_path: "public/uploads/1643728771433-programmer.jpg" },
+                defaults: {
+                    image_path: "public/uploads/1643728771433-programmer.jpg"
+                },
+            }).then(function () {
+                callback();
+            });
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
 
     async.waterfall(
-        [MerchantSeeder, ShopSeeder],
+        [MerchantSeeder, ShopSeeder, ImageSeeder],
         function (err) {
             if (err) console.error(err);
             else console.info("DB seed completed!");
